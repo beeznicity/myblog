@@ -1,0 +1,17 @@
+body{
+	margin: 0 auto;
+}
+.top{
+	background-color: white;
+	height: 25px;
+	border: 1px solid;
+
+}
+
+.container{
+	width: 400px;
+	height: 400px;
+	margin: 15px auto;
+	border: 1px solid;
+	background-color: blue;
+}
