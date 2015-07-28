@@ -1,4 +1,5 @@
 from app import db
+import uuid
 
 
 class Entry(db.Model):
@@ -10,6 +11,7 @@ class Entry(db.Model):
 	date= db.Column(db.Date)
 
 	def __init__(self, title, body, date):
+
 		self.title = title
 		self.body = body
 		self.date=date
