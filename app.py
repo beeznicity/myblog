@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
 import os
 
@@ -6,12 +6,18 @@ app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 db = SQLAlchemy(app)
 
-from model import Entry
+from model import *
 
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def hello():
-	return render_template('index.html')
+	db_entries = Entry.query.all()
+	entries=[]
+	for e in db_entries:
+		entries.append(e)
+	return render_template('index.html', entries = db_entries)
+
+
 
 
 @app.route('/<name>')
