@@ -1,26 +1,27 @@
 body{
 	margin: 0 auto;
 }
+
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
 .top{
 	margin: 0 auto;
 	background-color: white;
 	border-bottom: 1px solid;
-	width: 800px;
 	text-align: center;
 	font-size: 30px;
-	font-weight: bold;
-	font-style: oblique;
+	font-family: 'Merriweather Sans', sans-serif;
 }
 .entry-container{
-	width: 400px;
-	padding: 2px;
+	padding: 5px;
 	background: #ffffff;
-	margin: 20px auto;
+	margin-top: 20px;
 
 }
 .entry-header{
 	position: relative;
-	width: 400px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid;
 }
@@ -30,7 +31,7 @@ body{
 }
 .entry-date{
 	position: absolute;
-	right: 5px;
+	right: 2px;
 	top: 8px;
 	font-size: 16px;
 	font-weight: bold;

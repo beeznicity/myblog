@@ -1,12 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<title>Frozen Seas</title>
+
+		<link rel=stylesheet type=text/css href="{{url_for('static',filename='style.css') }}">
+		<link rel=stylesheet href="{{url_for('static',filename='bootstrap.min.css') }}">
+		<link rel=stylesheet href="{{url_for('static',filename='bootstrap-theme.min.css') }}">
+		<link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="scripts/bootstrap.min.js"></script>
+	</head>
+
+<div class="container">
 <div style="color:red">{{error}}</div>
-<form action="" method=post class=add-entry id="postForm">
-  <dl>
-    <dt>Title:
-    <dd><input type=text size=30 name=title value="">
-    <dt>Body:
-    <dd><textarea name=body rows=5 cols=40 value=""></textarea>
-    <dd><input type=Submit value=Share>
-  </dl>
+<form action="" method=post class="col-md-8" id="postForm">
+	<div class = "form-group">
+	    <label><h2>Title</h2></label>
+	    <input type=text class="form-control" name=title value="">
+	</div>
+	<div class="form-group">
+	    <label><h2>Body</h2></label>
+	    <textarea name=body class="form-control" rows=10 value=""></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Share</button>
+
 </form>
 
-
+</div>

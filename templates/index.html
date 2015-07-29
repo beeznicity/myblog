@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Frozen Seas</title>
+
+
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    	<title>Frozen Seas</title>
+
 		<link rel=stylesheet type=text/css href="{{url_for('static',filename='style.css') }}">
+		<link rel=stylesheet href="{{url_for('static',filename='bootstrap.min.css') }}">
+		<link rel=stylesheet href="{{url_for('static',filename='bootstrap-theme.min.css') }}">
 		<link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="scripts/bootstrap.min.js"></script>
 	</head>
 
 	<body>
-		<div class="top">Frozen Seas</div>
-		{% for entry in entries%}
-		<div class="entry-container">
-			<div class="entry-header">
-				<div class="entry-title">{{entry.title}}</div>
-				<div class="entry-date">{{entry.date}}</div>
+			<div class="container">
+				<div class="col-md-2"></div>
+				<div class="top col-md-8"><h1><strong>Frozen Seas</strong></h1></div>
+				<div class="col-md-2"></div>
 			</div>
-			<div class="entry-body">{{entry.body}}</div>
-		</div>
-		{% endfor %}
-		<div class="bottom"></div>
+
+				{% for entry in entries%}
+				<div class="container blog-post">
+				<div class="col-md-3"></div>
+
+				<div class="col-md-6 entry-container">
+					<div class="entry-header">
+						<div class="entry-title"><h2>{{entry.title}}</h2></div>
+						<div class="entry-date">{{entry.date}}</div>
+					</div>
+					<div class="entry-body">{{entry.body}}</div>
+				</div>
+
+				<div class="col-md-3"></div>
+
+			</div>
+			{% endfor %}
 	</body>
 </html>
 
