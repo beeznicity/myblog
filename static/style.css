@@ -14,7 +14,8 @@ body{
 .entry-container{
 	padding: 5px;
 	background: #ffffff;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
 }
 .entry-header{
