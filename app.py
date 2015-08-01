@@ -67,17 +67,17 @@ def logout():
 	return redirect(url_for('index'))
 
 
-@app.route('/register', methods = ['GET', 'POST'])
-def register():
-	form = RegistrationForm()
-	if form.validate_on_submit():
-		user = User(email=form.email.data,
-                    username=form.username.data,
-                    password=form.password.data)
-		db.session.add(user)
-		db.session.commit()
-		flash('You can now login.')
-		return redirect(url_for('login'))
+# @app.route('/register', methods = ['GET', 'POST'])
+# def register():
+# 	form = RegistrationForm()
+# 	if form.validate_on_submit():
+# 		user = User(email=form.email.data,
+#                     username=form.username.data,
+#                     password=form.password.data)
+# 		db.session.add(user)
+# 		db.session.commit()
+# 		flash('You can now login.')
+# 		return redirect(url_for('login'))
 
-	return render_template('register.html', form=form)
+# 	return render_template('register.html', form=form)
 
